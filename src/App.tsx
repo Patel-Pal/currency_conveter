@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import InputBox from './components/InputBox';
 import useCurrencyInfo from './hooks/useCurrencyInfo';
-
+import './index.css';
 
 function App() {
   const [amount, setAmount] = useState<number>(0);
@@ -28,10 +28,8 @@ function App() {
 
   return (
     <div
-      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url('https://t3.ftcdn.net/jpg/04/34/58/54/360_F_434585463_zpdtTpTEbqQFfsp6RVEW6IIxEM9dHf86.jpg')`,
-      }}
+      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat ccc"
+      
     >
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
