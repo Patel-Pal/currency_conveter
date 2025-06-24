@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import InputBox from './components/InputBox';
 import useCurrencyInfo from './hooks/useCurrencyInfo';
-import bgimage from "./assets/img/bgimg.jpg"
+
 
 function App() {
   const [amount, setAmount] = useState<number>(0);
