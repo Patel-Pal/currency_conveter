@@ -2,14 +2,14 @@
 
 
 @media (min-width: 425px) {
-    .ccc {
-        background-image: url('./assets/img/bgimg.jpg');
+    .bg_img {
+        background-image: url('/public/assets/img/bgimg.jpg');
         /* background-color: red; */
     }
 }
 @media (max-width: 376px) {
-    .ccc {
-        background-image: url('./assets/img/bgimg2.png');
+    .bg_img {
+        background-image: url('/public/assets/img/bgimg2.png');
         /* background-color: red; */
     }
 }

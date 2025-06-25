@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div
-      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat ccc"
+      className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat bg_img"
       
     >
       <div className="w-full">
@@ -47,6 +47,7 @@ function App() {
                 onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
                 onAmountChange={(value) => setAmount(value)}
+                
               />
             </div>
 

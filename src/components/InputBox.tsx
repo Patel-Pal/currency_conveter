@@ -22,6 +22,7 @@ const InputBox: React.FC<InputBoxProps> = ({
   amountDisable = false,
   currencyDisable = false,
   className = '',
+  
 }) => {
   const amountInputId = useId();
 
