@@ -3,13 +3,13 @@
 
 @media (min-width: 425px) {
     .ccc {
-        background-image: url('https://t3.ftcdn.net/jpg/04/34/58/54/360_F_434585463_zpdtTpTEbqQFfsp6RVEW6IIxEM9dHf86.jpg');
+        background-image: url('./assets/img/bgimg.jpg');
         /* background-color: red; */
     }
 }
 @media (max-width: 376px) {
     .ccc {
-        background-image: url('https://www.shutterstock.com/image-photo/blue-money-business-graph-finance-600nw-2469272775.jpg');
+        background-image: url('./assets/img/bgimg2.png');
         /* background-color: red; */
     }
 }
