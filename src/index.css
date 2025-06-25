@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 
-@media (min-width: 425px) {
-    .bg_img {
-        background-image: url('/public/assets/img/bgimg.jpg');
-        /* background-color: red; */
+/* @layer utilities {
+  @media (max-width: 376px) {
+    .bg-img-mobile {
+      background-image: url('/assets/img/bgimg2.png');
     }
-}
-@media (max-width: 376px) {
-    .bg_img {
-        background-image: url('/public/assets/img/bgimg2.png');
-        /* background-color: red; */
+  }
+  @media (min-width: 425px) {
+    .bg-img-desktop {
+      background-image: url('/assets/img/bgimg.jpg');
     }
-}
+  }
+} */
