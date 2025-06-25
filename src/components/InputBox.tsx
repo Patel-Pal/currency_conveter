@@ -2,8 +2,8 @@ import React, { useId } from 'react';
 
 type InputBoxProps = {
   label: string;
-  amount: number;
-  onAmountChange?: (value: number) => void;
+  amount: number | '';
+  onAmountChange?: (value: number | '') => void;
   onCurrencyChange?: (currency: string) => void;
   currencyOptions?: string[];
   selectCurrency?: string;
@@ -39,7 +39,7 @@ const InputBox: React.FC<InputBoxProps> = ({
           placeholder="Amount"
           disabled={amountDisable}
           value={amount}
-          onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
+          onChange={(e) => onAmountChange && onAmountChange(e.target.value === '' ? '' : Number(e.target.value))}
         />
       </div>
       <div className="w-1/2 flex flex-wrap justify-end text-right">

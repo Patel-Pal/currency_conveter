@@ -4,7 +4,7 @@ import useCurrencyInfo from './hooks/useCurrencyInfo';
 import './index.css';
 
 function App() {
-  const [amount, setAmount] = useState<number>(0);
+  const [amount, setAmount] = useState<number | ''>('');
   const [from, setFrom] = useState<string>('usd');
   const [to, setTo] = useState<string>('inr');
   const [convertedAmount, setConvertedAmount] = useState<number>(0);
@@ -16,20 +16,20 @@ function App() {
   const swap = () => {
     setFrom(to);
     setTo(from);
-    setConvertedAmount(amount);
+    setConvertedAmount(typeof amount === 'number' ? amount : 0);
     setAmount(convertedAmount);
   };
 
   const convert = () => {
-    if (currencyInfo && currencyInfo[to]) {
-      setConvertedAmount(amount * currencyInfo[to]);
+    if (currencyInfo && currencyInfo[to] && amount !== '') {
+      setConvertedAmount(Number(amount) * currencyInfo[to]);
     }
   };
 
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat bg-black bg_img"
-      
+
     >
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
@@ -47,13 +47,13 @@ function App() {
                 onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
                 onAmountChange={(value) => setAmount(value)}
-                
+
               />
             </div>
 
             <div className="relative w-full h-0.5">
               <button
-                type="button" 
+                type="button"
                 className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
                 onClick={swap}
               >
@@ -74,7 +74,7 @@ function App() {
 
             <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
               Convert {from.toUpperCase()} to {to.toUpperCase()}
-            </button> 
+            </button>
           </form>
         </div>
       </div>
